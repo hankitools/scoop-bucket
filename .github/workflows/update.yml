@@ -1,0 +1,35 @@
+name: Update manifest
+
+# Keeps bucket/hanki-tools.json on the latest Hanki Tools release. Runs every six hours and on demand.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-manifest
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Point the manifest at the latest release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./bin/update-manifest.ps1
+
+      - name: Commit a changed manifest
+        run: |
+          if git diff --quiet; then echo "Manifest unchanged."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "hanki-tools: update to $(jq -r .version bucket/hanki-tools.json)"
+          git push

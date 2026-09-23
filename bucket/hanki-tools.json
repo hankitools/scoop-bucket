@@ -1,0 +1,37 @@
+{
+    "version": "0.17.0",
+    "description": "Windows toolkit that explains what your PC reports in plain language: Full System Scan, Windows Update, battery and startup, Defender, network and cleanup checks.",
+    "homepage": "https://hanki.tools/",
+    "license": "MIT",
+    "notes": [
+        "Hanki Tools isn't code-signed yet. Scoop verifies the download against the SHA-256 checksum published with the release.",
+        "Scan history and recovery records are kept in %LOCALAPPDATA%\\IgezziGuard, outside the Scoop folder."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hankitools/hankitools-windows/releases/download/v0.17.0/HankiTools-0.17.0-win-x64-unsigned.zip",
+            "hash": "7f6a747650ff726a8f86b486ec34398313524949aa6b86a713f8680411651a6b",
+            "extract_dir": "HankiTools-0.17.0-win-x64-unsigned"
+        }
+    },
+    "shortcuts": [
+        [
+            "HankiTools.exe",
+            "Hanki Tools"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hankitools/hankitools-windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hankitools/hankitools-windows/releases/download/v$version/HankiTools-$version-win-x64-unsigned.zip",
+                "extract_dir": "HankiTools-$version-win-x64-unsigned"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
