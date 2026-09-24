@@ -21,7 +21,7 @@ starts. See the [code signing policy](https://github.com/hankitools/hankitools-w
 
 ## How this bucket stays current
 
-`.github/workflows/update.yml` runs every six hours. It reads the latest Hanki Tools release and,
+`.github/workflows/update.yml` runs every six hours. It reads the newest Hanki Tools release (previews included, as on hanki.tools) and,
 when there is a new one, updates `bucket/hanki-tools.json` (version, download URL, checksum) and
 commits it. You can also run it from the Actions tab or locally:
 

@@ -1,17 +1,17 @@
 {
-    "version": "0.17.0",
-    "description": "Windows toolkit that explains what your PC reports in plain language: Full System Scan, Windows Update, battery and startup, Defender, network and cleanup checks.",
+    "version": "0.18.0-rc.7",
+    "description": "Windows toolkit that explains your PC in plain language: Fix my PC finds what's wrong and fixes it safely, and Tune my PC sets it up for gaming, creative work or low power.",
     "homepage": "https://hanki.tools/",
     "license": "MIT",
     "notes": [
         "Hanki Tools isn't code-signed yet. Scoop verifies the download against the SHA-256 checksum published with the release.",
+        "This bucket follows the newest Hanki Tools release, including previews.",
         "Scan history and recovery records are kept in %LOCALAPPDATA%\\IgezziGuard, outside the Scoop folder."
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hankitools/hankitools-windows/releases/download/v0.17.0/HankiTools-0.17.0-win-x64-unsigned.zip",
-            "hash": "7f6a747650ff726a8f86b486ec34398313524949aa6b86a713f8680411651a6b",
-            "extract_dir": "HankiTools-0.17.0-win-x64-unsigned"
+            "url": "https://github.com/hankitools/hankitools-windows/releases/download/v0.18.0-rc.7-preview/HankiTools-0.18.0-rc.7-win-x64-unsigned-preview.zip",
+            "hash": "69b1521ec851bb1d581586728f9ff501a49ea84a6f13d5ad0a9e284ffbf7951a"
         }
     },
     "shortcuts": [
