@@ -1,5 +1,5 @@
 {
-    "version": "0.18.0",
+    "version": "0.19.0-rc.1",
     "description": "Windows toolkit that explains your PC in plain language: Fix my PC finds what's wrong and fixes it safely, and Tune my PC sets it up for gaming, creative work or low power.",
     "homepage": "https://hanki.tools/",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hankitools/hankitools-windows/releases/download/v0.18.0/HankiTools-0.18.0-win-x64-unsigned.zip",
-            "hash": "16cdb6f7c3b7b9ebe28f37acad0d4bf27bda00fbb819782823983c8824e65c1d"
+            "url": "https://github.com/hankitools/hankitools-windows/releases/download/v0.19.0-rc.1-preview/HankiTools-0.19.0-rc.1-win-x64-unsigned-preview.zip",
+            "hash": "b3403f12e66ec98a8029bdc400b4608a234ba9a66f31a812ec76e00afa9c191e"
         }
     },
     "shortcuts": [
